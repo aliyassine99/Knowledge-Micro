@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: schools
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/schools_ms
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
